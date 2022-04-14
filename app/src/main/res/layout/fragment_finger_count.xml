@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /*
+  ~ **********************************************************************************
+  ~ |                                                                                |
+  ~ | Copyright 2021. Huawei Technologies Co., Ltd. All rights reserved.             |
+  ~ |                                                                                |
+  ~ | Licensed under the Apache License, Version 2.0 (the "License");                |
+  ~ | you may not use this file except in compliance with the License.               |
+  ~ | You may obtain a copy of the License at                                        |
+  ~ |                                                                                |
+  ~ | http://www.apache.org/licenses/LICENSE-2.0                                     |
+  ~ |                                                                                |
+  ~ | Unless required by applicable law or agreed to in writing, software            |
+  ~ | distributed under the License is distributed on an "AS IS" BASIS,              |
+  ~ | WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.       |
+  ~ | See the License for the specific language governing permissions and            |
+  ~ | limitations under the License.                                                 |
+  ~ |                                                                                |
+  ~ **********************************************************************************
+  ~ */
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#8dc9ff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/dialog_background"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/viewImage2"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/ic_gingerbread_man_cookies_pana" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="25dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnTakePhoto2"
+                android:layout_width="150dp"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:background="@drawable/yellow_button"
+                android:text="Take Photo"
+                android:textAllCaps="false" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnChoosePhoto2"
+                android:layout_width="150dp"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/viewImage"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:background="@drawable/yellow_button"
+                android:text="Choose Photo"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnClassify2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewImage"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/yellow_button"
+            android:text="Show Result !"
+            android:textAllCaps="false" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout_TR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvTR"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvLanguageTR"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/angella_demo"
+                        android:gravity="center"
+                        android:text="EN"
+                        android:textColor="#3ca1fc"
+                        android:textSize="50dp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                app:cardCornerRadius="10dp"
+                android:elevation="5dp"
+                android:layout_alignTop="@+id/cvTR"
+                android:layout_alignBottom="@+id/cvTR"
+                android:layout_toRightOf="@+id/cvTR"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="-20dp"
+                android:layout_marginRight="10dp">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView_EnResult"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        android:layout_marginLeft="25dp"
+                        android:fontFamily="@font/angella_demo"
+                        android:text="Finger Count!"
+                        android:textColor="#8dc9ff"
+                        android:textSize="25dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center"
+                        android:gravity="right"
+                        android:layout_marginLeft="-50dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/listenEnglish"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_volume_up_24"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_mic_none_24"
+                            android:layout_marginTop="10dp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout_EN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvEN"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvLanguageEN"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:fontFamily="@font/angella_demo"
+                        android:text="TR"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#3ca1fc"
+                        android:textSize="50dp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                app:cardCornerRadius="10dp"
+                android:elevation="5dp"
+                android:layout_alignTop="@+id/cvEN"
+                android:layout_alignBottom="@+id/cvEN"
+                android:layout_toRightOf="@+id/cvEN"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="-20dp"
+                android:layout_marginRight="10dp">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView_TrResult"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        android:layout_marginLeft="25dp"
+                        android:fontFamily="@font/angella_demo"
+                        android:text="Finger Count!"
+                        android:textColor="#8dc9ff"
+                        android:textSize="25dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center"
+                        android:gravity="right"
+                        android:layout_marginLeft="-50dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:visibility="invisible"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_volume_up_24"/>
+                        <ImageView
+                            android:visibility="invisible"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_mic_none_24"
+                            android:layout_marginTop="10dp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+</LinearLayout>
